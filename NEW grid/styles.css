@@ -1,0 +1,81 @@
+@charset "UTF-8";
+* {margin: 0; padding: 0;}
+body {
+    font-family: "Franklin Gothic Book", "Franklin Gothic Demi", "Franklin Gothic Demi Cond", "Franklin Gothic Heavy", "Franklin Gothic Medium", "Franklin Gothic Medium Cond"; 
+    background: #0F0A12; 
+} #page {
+    width: 928px;
+    height: 2024px;
+    background: #0F0A12;
+    margin: 24px auto;
+    border: 1px solid gray;
+    box-shadow: 2px 3px 6px gray;
+    z-index: 0;
+} header {
+    width: 928px;
+    margin: 0 auto;
+} header img {
+    width: 100%;
+} header h1 {
+    font: 48pt/1.4em 'ghosthey';
+    text-align: center;
+    margin-top: 24px;
+    color: #8C00FF;
+} main {
+    width: 384px;
+    height: 384px;
+    border: 1px dashed gray;
+    margin: 24px auto;
+	gap: 3px;
+	justify-content: center;
+	grid-area: 1/2/4/3;
+  	display: grid;
+ 	 grid-template: auto auto / auto auto;
+} @media only screen and (max-width: 750px) {
+  main {
+    grid-template: repeat(4,auto) / auto;
+} img {
+  width: 100%;
+}
+	
+} .thumbnail-container {
+    text-align: left;
+    position: relative;
+    z-index: 1;
+} .thumbnail {
+    width: 256px;
+    position: absolute;
+    cursor: pointer;
+    transition: filter 0.2s;
+} .thumbnail:hover {
+    filter: drop-shadow(2px 3px 6px gray);
+    transition: filter 0.2s;
+} .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+} .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+} .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+} .close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
